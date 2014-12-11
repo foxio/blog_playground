@@ -28,7 +28,7 @@ Fork this repo
   * Save the calculation in the read_time on the article
   * Once you get the read_time as a part of creation, make sure it is always saved
 and updated with the model.
-** *Extra* display the number on the article show view in a human readable format
+  * **Extra:** display the number on the article show view in a human readable format
 example: 60 becomes 1 minute
 
 #### 2. As a blogger, I want to be able to tag my articles, so that my users get an idea of what the article is about.
