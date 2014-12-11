@@ -10,14 +10,19 @@ Fork this repo
 
 ### Steps to get the rails application running
 
+1. Install [Ruby](https://www.ruby-lang.org/en/documentation/installation/) and [RubyGems](https://rubygems.org/pages/download) if you don't already have it
 1. Install [Vagrant](https://www.vagrantup.com/downloads.html)
-2. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-3. cd into project directory and run `vagrant up`
-4. Once up run `vagrant ssh` to connect to the VM
-5. On the VM run `bundle install`
-6. Then run `rake db:migrate`
-7. Then run `rake db:seed`
-8. Then run `foreman start`
+1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+1. cd into project directory
+1. `vagrant plugin install vagrant-hostsupdater`
+1. `vagrant plugin install vagrant-librarian-chef`
+1. `vagrant plugin install vagrant-omnibus`
+1. Run `vagrant up`
+1. Once up run `vagrant ssh` to connect to the VM
+1. On the VM run `bundle install`
+1. Then run `rake db:migrate`
+1. Then run `rake db:seed`
+1. Then run `foreman start`
 
 ### Features to implement
 
