@@ -27,7 +27,7 @@ class Article < ActiveRecord::Base
       words = self.body.split
       keywords = words.select { |word| !stopwords.include?(word) }
       keyword_count = keywords.length
-      # assume a reading speed of 250 words per minute    
-      self.read_time = (keyword_count.to_f/250).round
+      # assume a reading speed of 250 words per minute and calculate read_time in seconds    
+      self.read_time = ((keyword_count.to_f/250)*60).round
   end
 end

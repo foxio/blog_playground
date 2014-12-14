@@ -8,8 +8,9 @@
 </p>
 
 <p>
-  <% time = "about #{pluralize(@article.read_time, "minute")}" %>
-  <% time = "Less than a minute" if @article.read_time == 0 %>
+  <% minutes = (@article.read_time.to_f/60).round %>
+  <% time = "about #{pluralize(minutes, "minute")}" %>
+  <% time = "Less than a minute" if minutes == 0 %>
   Read time- <%= time %> 
 </p>
 
