@@ -1,8 +1,9 @@
 <h1> <%= @article.title %> </h1>
 
+  <% time = "about #{pluralize(@article.read_time, "minute")}" %>
+  <% time = "Less than a minute" if @article.read_time == 0 %>
 <p>
-  Read in
-  <%= @article.read_time %>
+  Read time- <%= time %> 
 </p>
 
 <p>
