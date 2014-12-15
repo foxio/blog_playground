@@ -1,8 +1,17 @@
 <h1> <%= @article.title %> </h1>
 
 <p>
-  Read in
-  <%= @article.read_time %>
+  Tags:
+  <% @article.tags.each do |tag| %>
+    <%= tag.name %><%= "," unless tag == @article.tags.last %>
+  <% end %>
+</p>
+
+<p>
+  <% minutes = (@article.read_time.to_f/60).round %>
+  <% time = "about #{pluralize(minutes, "minute")}" %>
+  <% time = "Less than a minute" if minutes == 0 %>
+  Read time- <%= time %> 
 </p>
 
 <p>

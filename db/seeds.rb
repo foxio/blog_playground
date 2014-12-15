@@ -12,4 +12,8 @@ Article.create({
   })
 
 # TODO uncomment once the Tag model is created
-# Tag.create([{name: 'Rails'},{name: 'Work'},{name: 'Vacation'}])
+ Tag.create([{name: 'Rails'},{name: 'Work'},{name: 'Vacation'}])
+
+
+# Make some taggings
+  Tagging.create([{tag_id: 2, article_id: 1},{tag_id: 1, article_id: 2},{tag_id: 3, article_id: 2}])
