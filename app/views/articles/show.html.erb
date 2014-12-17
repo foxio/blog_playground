@@ -2,11 +2,16 @@
 
 <p>
   Read in
-  <%= @article.read_time %>
+  <%= distance_of_time_in_words(Time.now, Time.now+@article.read_time, include_seconds: true) %>
 </p>
 
 <p>
   <%= @article.body %>
 </p>
+<% if @tag%>
+TAG<br>
+ <%= @tag.name%>
+ <% end%>
+<p>
 
 <%= link_to 'Edit', edit_article_path(@article) %>

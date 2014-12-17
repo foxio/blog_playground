@@ -3,7 +3,7 @@
 
 Article.create({
   title:'My first post',
-  body: 'Just testing this thing out. Will people read?'
+  body: 'Just testing this thing out. Will people read? Checking my read in time to make sure it displays the time in words correctly'
   })
 
 Article.create({
@@ -12,4 +12,4 @@ Article.create({
   })
 
 # TODO uncomment once the Tag model is created
-# Tag.create([{name: 'Rails'},{name: 'Work'},{name: 'Vacation'}])
+ Tag.create([{name: 'Rails'},{name: 'Work'},{name: 'Vacation'}])
