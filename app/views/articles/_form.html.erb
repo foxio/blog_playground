@@ -8,7 +8,8 @@
     <%= f.label :body %>
     <%= f.text_area :body %>
   </p>
-
+  Tags
+<%= f.select :tag_id, Tag.all.collect { |t| [t.name, t.id]} %>
   <p>
     <%= f.submit %>
   </p>
